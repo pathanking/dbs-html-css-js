@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form</title>
+    <script>
+        function showDetails(myform) {
+            let data = myform.fn.value+'\n'+myform.ln.value+ '\n'+ myform.em.value + '\n'+ myform.pw.value + '\n'+ myform.gender.value + '\n'+ myform.java.value+ '\n'+ myform.spring.value;
+            alert('submit button was clicked!!');
+            alert('Here is Your Details: \n'+ data);
+        }
+    </script>
+</head>
+<body>
+    <h2>HTML Form - Display A Registration Form</h2>
+    <form name="myform">
+        <table border="1px">
+            <tr>
+                <th>Lable</th>
+               <th>Value</th>
+            </tr>
+            <tr>
+                <td> <label for="fn">First Name:</label> </td>
+                <td> <input type="text" placeholder="Enter Your First Name" id="fn"></td>
+            </tr>
+            <tr>
+                <td><label for="ln">Last Name:</label></td>
+                <td> <input type="text" placeholder="Enter Your Last Name" id="ln"></td>
+            </tr>
+            <tr>
+                <td> <label for="em">Email:</label></td>
+                <td><input type="email" placeholder="Enter Your Email" id="em"></td>
+            </tr>
+            <tr>
+                <td> <label for="pw">Password:</label></td>
+                <td>    <input type="password" placeholder="Enter Your Password" id="pw"></td>
+            </tr>
+            <tr>
+                <td>Gender: </td>
+                <td><input type="radio" name="gender" id="female" value="female">Female</input><input type="radio" name="gender" id="male" value="male">Male</input><input type="radio" name="gender" id="other" value="other">Other</input></td>
+            </tr>
+            <tr>
+                <td>Courses:</td>  
+                <td><input type="checkbox" name="courses" id="spring" value="spring">Spring</input><input type="checkbox" name="courses" id="java" value="java">Java</input><input type="checkbox" name="courses" id="devops" value="devops">Devops</input></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button type="submit" onclick="showDetails(myform)">Submit</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="reset">Reset</button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
